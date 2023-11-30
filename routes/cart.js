@@ -59,8 +59,8 @@ router.post('/checkout/payment/:amount',async(req,res)=>{
       enabled: true,
     },
     mode: "payment",
-    success_url: "http://localhost:8080/products",
-    cancel_url: "http://localhost:8080/products",
+    success_url: "https://project-f4wn.onrender.com/products",
+    cancel_url: "https://project-f4wn.onrender.com/products",
   });
   res.redirect(303, session.url);
   // res.render("cart/payment");
