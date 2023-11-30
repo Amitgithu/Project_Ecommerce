@@ -167,7 +167,7 @@ router.delete('/products/:id', isLoggedIn,isProductAuthor,async (req, res) => {
         const { id } = req.params;
         await Product.findByIdAndDelete(id);
         req.flash('success','Product Deleted Succeddfully!')
-        res.redirect('/products');
+        res.redirect('/products/seller_products');
     }
     catch (e) {
         res.status(500).render('error',{err:e.message})   
